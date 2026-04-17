@@ -6,6 +6,13 @@ export interface UserProfile {
   uid:              string;
   displayName?:     string;
   email?:           string;
+  examDate?:        string;
+  attempt?:         string;
+  targetScore?:     string;
+  studyHours?:      string;
+  weakAreas?:       string[];
+  onboardingDone?:  boolean;
+  photoURL?:        string;
   markedQuestions?: string[];
   // ─── Paywall ───────────────────────────────────────────────────────────────
   isPro?:           boolean;           // true once Dodo webhook fires
