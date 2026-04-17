@@ -25,7 +25,7 @@ function Check() {
   );
 }
 
-function HamburgerIcon({ open }) {
+function HamburgerIcon({ open }: { open: boolean }) {
   return (
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
       {open ? (
@@ -69,7 +69,7 @@ export default function HomePage() {
     return () => unsub();
   }, [router]);
 
-  const handleNav = (path) => { setMenuOpen(false); router.push(path); };
+  const handleNav = (path: string) => { setMenuOpen(false); router.push(path); };
 
   if (checking) return (
     <div style={{ minHeight:'100vh', display:'flex', alignItems:'center', justifyContent:'center', background:'#fff' }}>
