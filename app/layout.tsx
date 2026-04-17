@@ -20,7 +20,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                if (localStorage.getItem('gre_theme') === 'dark') {
+                if (typeof window !== 'undefined' && localStorage.getItem('gre_theme') === 'dark') {
                   document.documentElement.classList.add('dark');
                 }
               } catch(_) {}
