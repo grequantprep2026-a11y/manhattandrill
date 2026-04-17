@@ -7,6 +7,8 @@ export const metadata: Metadata = {
     'Master GRE Quantitative Reasoning with Manhattan-style practice questions.',
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -15,6 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* verification update */}
+<meta name="google-site-verification" content="fsuB0os2zhe1ez8vT85opTjmU4nqLdUZA4BLA1qBeTI" />
         {/* Inline script avoids FOUC on dark mode */}
         <script
           dangerouslySetInnerHTML={{
