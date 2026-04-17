@@ -107,8 +107,6 @@ export async function POST(req: Request) {
           },
           { merge: true }
         );
-
-        // Plan updated
         break;
       }
 
@@ -129,11 +127,11 @@ export async function POST(req: Request) {
           isPro:        false,
           lastUpdated:  new Date(),
         });
-        // isPro set to false
+        console.log(`⚠️ isPro=false (${event.type}) for ${userId}`);
         break;
 
       default:
-        // Unhandled event type
+        console.log("ℹ️ Unhandled event type:", event.type);
     }
 
     return NextResponse.json({ received: true }, { status: 200 });
