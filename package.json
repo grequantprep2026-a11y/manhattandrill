@@ -9,9 +9,19 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@dodopayments/nextjs": "^0.3.5",
+    "chart.js": "^4.5.1",
+    "clsx": "^2.1.1",
+    "dodopayments": "^2.27.0",
+    "firebase": "^12.11.0",
+    "firebase-admin": "^13.8.0",
+    "lucide-react": "^1.7.0",
     "next": "16.2.2",
+    "ngrok": "^5.0.0-beta.2",
+    "pdf-parse": "^2.4.5",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "zustand": "^5.0.12"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

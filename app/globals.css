@@ -1,26 +1,61 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Markdown styles */
+.md-content {
+  line-height: 1.6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.md-content code {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.md-content pre {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  overflow-x: auto;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.md-content blockquote {
+  border-left: 4px solid #64748b;
+  padding-left: 16px;
+  margin: 16px 0;
+  color: #64748b;
+  font-style: italic;
 }
+
+.md-content strong {
+  font-weight: 700;
+}
+
+.md-content em {
+  font-style: italic;
+}
+
+.md-content ul, .md-content ol {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.md-content li {
+  margin: 4px 0;
+}
+
+.md-content h1, .md-content h2, .md-content h3 {
+  font-weight: 700;
+  margin: 16px 0 8px 0;
+}
+
+.md-content h1 { font-size: 1.5em; }
+.md-content h2 { font-size: 1.25em; }
+.md-content h3 { font-size: 1.1em; }
