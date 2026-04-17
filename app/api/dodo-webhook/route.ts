@@ -4,14 +4,14 @@ export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import DodoPayments from "dodopayments";
 
-const client = new DodoPayments({
-  bearerToken: process.env.DODO_PAYMENTS_API_KEY_LIVE!,
-  environment: "live_mode",
-  webhookKey: process.env.DODO_PAYMENTS_WEBHOOK_KEY_LIVE!,
-});
-
 export async function POST(req: Request) {
   try {
+    const client = new DodoPayments({
+      bearerToken: process.env.DODO_PAYMENTS_API_KEY_LIVE!,
+      environment: "live_mode",
+      webhookKey: process.env.DODO_PAYMENTS_WEBHOOK_KEY_LIVE!,
+    });
+
     const { adminDb } = await import("../../lib/firebase-admin");
 
     const rawBody = await req.text();
